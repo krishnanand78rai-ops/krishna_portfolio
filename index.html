@@ -85,20 +85,22 @@
     .hero-kju { margin-left: auto; color: var(--muted); font-size: 11px; }
     .hero-art {
       position: relative;
-      min-height: 424px;
+      width: min(100%, 390px);
+      aspect-ratio: 4 / 5;
       background: #d6d5c9;
       overflow: hidden;
       isolation: isolate;
+      justify-self: end;
     }
     .hero-art::before {
       position: absolute;
       z-index: 1;
       inset: 0;
       content: "";
-      background: linear-gradient(180deg, transparent 55%, rgba(23, 26, 23, 0.56));
+      background: linear-gradient(180deg, transparent 72%, rgba(23, 26, 23, 0.56));
       pointer-events: none;
     }
-    .hero-art img { width: 100%; height: 100%; min-height: 424px; position: absolute; inset: 0; object-fit: cover; }
+    .hero-art img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center top; }
     .art-index { position: absolute; z-index: 2; top: 18px; left: 18px; background: var(--green); padding: 9px 11px; font-size: 10px; }
     .art-caption { position: absolute; z-index: 2; bottom: 19px; left: 20px; color: white; font-size: 11px; }
     .art-corner { position: absolute; z-index: 2; width: 42px; height: 42px; right: 18px; bottom: 17px; border: 1px solid rgba(255,255,255,.75); display: grid; place-items: center; color: white; font-size: 20px; }
@@ -148,7 +150,7 @@
       .nav a:nth-child(2) { display: none; }
       .hero { min-height: unset; grid-template-columns: 1fr; gap: 38px; padding: 60px 0 54px; }
       h1 { font-size: clamp(58px, 14vw, 86px); }
-      .hero-art, .hero-art img { min-height: 340px; }
+      .hero-art { width: min(100%, 360px); justify-self: center; }
       .hero-kju { margin-left: 0; }
       .section { padding: 60px 0; }
       .section-head, .about-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -165,7 +167,6 @@
       .shell { width: calc(100% - 32px); }
       .brand-name { font-size: 12px; }
       .nav { gap: 13px; font-size: 12px; }
-      .hero-art, .hero-art img { min-height: 285px; }
       .hero-intro { font-size: 15px; }
       .stack-name { font-size: 22px; }
       .footer { gap: 16px; font-size: 9px; }
@@ -196,10 +197,10 @@
           <span class="hero-kju mono">KJU</span>
         </div>
       </div>
-      <div class="hero-art reveal reveal-delay" role="img" aria-label="Laptop and workspace for programming">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1300&q=85" alt="Laptop displaying code on a developer's desk" fetchpriority="high">
+      <div class="hero-art reveal reveal-delay" role="img" aria-label="Portrait of Krishna Nand Rai">
+        <img src="26BCNC27.jpg" alt="Krishna Nand Rai" fetchpriority="high">
         <span class="art-index mono">01 / PROFILE</span>
-        <span class="art-caption mono">LEARNING BY BUILDING</span>
+        <span class="art-caption mono">KRISHNA NAND RAI</span>
         <span class="art-corner" aria-hidden="true">↗</span>
       </div>
     </section>
